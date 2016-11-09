@@ -1,5 +1,6 @@
 package com.feicuiedu.mvpdemo.network;
 
+import com.feicuiedu.mvpdemo.model.LoginResult;
 import com.feicuiedu.mvpdemo.model.User;
 import com.feicuiedu.mvpdemo.model.UserResult;
 
@@ -14,10 +15,11 @@ import retrofit2.http.POST;
 
 public interface UserRetrofitApi {
 
-    // 在这个接口里面使用Retrofit来构建接口请求
-    // 稍后会讲解注解这个内容
 
     @POST("/Handler/UserHandler.ashx?action=register")
     Call<UserResult> register(@Body User user);
+
+    @POST("/Handler/UserHandler.ashx?action=login")
+    Call<LoginResult> login(@Body User user);
 
 }

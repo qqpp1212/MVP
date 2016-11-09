@@ -17,23 +17,13 @@ public class RegisterPresenter {
     /**
      * 对外提供一个方法：主要做注册的业务实现
      * 怎么调到视图的方法呢？
-     * 1. Activity，传个上下文：生命周期的
+     * 1. Activity，传个上下文：生命周期的限制，所以不采用
      * 2. 接口回调的方式：我们要使用的方式
      */
     private RegisterView registerView;
 
     public RegisterPresenter(RegisterView registerView) {
         this.registerView = registerView;
-    }
-
-    public interface RegisterView {
-        void showProgress();
-
-        void hideProgress();
-
-        void showMessage(String msg);
-
-        void navigationToMain();
     }
 
     public void register(User user) {

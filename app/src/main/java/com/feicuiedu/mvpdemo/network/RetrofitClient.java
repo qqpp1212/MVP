@@ -1,5 +1,6 @@
 package com.feicuiedu.mvpdemo.network;
 
+import com.feicuiedu.mvpdemo.model.LoginResult;
 import com.feicuiedu.mvpdemo.model.User;
 import com.feicuiedu.mvpdemo.model.UserResult;
 
@@ -50,5 +51,10 @@ public class RetrofitClient implements UserRetrofitApi{
     @Override
     public Call<UserResult> register(@Body User user) {
         return userRetrofitApi.register(user);
+    }
+
+    @Override
+    public Call<LoginResult> login(@Body User user) {
+        return userRetrofitApi.login(user);
     }
 }

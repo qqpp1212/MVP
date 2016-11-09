@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.feicuiedu.mvpdemo.login.LoginActivity;
 import com.feicuiedu.mvpdemo.register.RegisterActivity;
 
 import butterknife.ButterKnife;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_login:{
-
+                startActivity(new Intent(this, LoginActivity.class));
             }
                 break;
             case R.id.btn_register:{
